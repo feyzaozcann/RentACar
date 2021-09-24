@@ -1,9 +1,13 @@
 ﻿using Business.Abstract;
 using Business.Constants;
+using Business.ValidationRules.FluentValidation;
+using Core.Aspects.Autofac.Validation;
+using Core.CrossCuttingConcerns.Validation;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
 using Entities.DTOs;
+using FluentValidation;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -49,12 +53,10 @@ namespace Business.Concrete
             return new SuccessResult<Car> (_carDal.Get(c => c.ColorId == carId));
         }
 
+        [ValidationAspect(typeof(CarValidator))]
         public IResult Add(Car car)
         {
-            if (car.CarId<5)
-            {
-                return new ErrorResult(Messages.CarIdInvalid);
-            }
+
             _carDal.Add(car);
 
             return new SuccessResult(Messages.CarAdded);

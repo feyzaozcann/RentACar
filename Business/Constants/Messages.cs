@@ -26,5 +26,6 @@ namespace Business.Constants
         public static string CustomerDeleted = "Müşteri silindi";
         public static string CustomerUpdated = "Müşteri güncellendi";
         public static string RentDateInvalid = "Kiralama tarihi geçerli değil";
+        public static string DailyPriceInvalid = "Günlük fiyatı geçerli değil";
     }
 }
