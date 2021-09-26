@@ -21,19 +21,19 @@ namespace Business.Concrete
         public IResult Add(Customer customer)
         {
             _customerDal.Add(customer);
-            return new SuccessResult<Customer>(Messages.CustomerAdded);
+            return new SuccessDataResult<Customer>(Messages.CustomerAdded);
         }
 
         public IResult Delete(Customer customer)
         {
             _customerDal.Delete(customer);
-            return new SuccessResult<Customer>(Messages.CustomerDeleted);
+            return new SuccessDataResult<Customer>(Messages.CustomerDeleted);
         }
 
         public IResult Update(Customer customer)
         {
             _customerDal.Update(customer);
-            return new SuccessResult<Customer>(Messages.CustomerUpdated);
+            return new SuccessDataResult<Customer>(Messages.CustomerUpdated);
         }
     }
 }

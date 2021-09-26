@@ -25,19 +25,19 @@ namespace Business.Concrete
                 return new ErrorResult(Messages.RentDateInvalid);
             }
             _rentalDal.Add(rental);
-            return new SuccessResult<Rental>(Messages.RentalAdded);
+            return new SuccessDataResult<Rental>(Messages.RentalAdded);
         }
 
         public IResult Delete(Rental rental)
         {
             _rentalDal.Add(rental);
-            return new SuccessResult<Rental>(Messages.RentalDeleted);
+            return new SuccessDataResult<Rental>(Messages.RentalDeleted);
         }
 
         public IResult Update(Rental rental)
         {
             _rentalDal.Add(rental);
-            return new SuccessResult<Rental>(Messages.RentalUpdated);
+            return new SuccessDataResult<Rental>(Messages.RentalUpdated);
         }
     }
 }

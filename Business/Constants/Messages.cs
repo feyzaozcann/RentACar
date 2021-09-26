@@ -27,5 +27,7 @@ namespace Business.Constants
         public static string CustomerUpdated = "Müşteri güncellendi";
         public static string RentDateInvalid = "Kiralama tarihi geçerli değil";
         public static string DailyPriceInvalid = "Günlük fiyatı geçerli değil";
+        public static string CarCountofBrandError = "Bir markadan en fazla 10 araba olabilir";
+        public static string CarAlreadyExists = "Araba zaten kayıtlı";
     }
 }
